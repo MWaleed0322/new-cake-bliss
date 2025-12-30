@@ -107,3 +107,88 @@ $('.reviwSlider').slick({
 });
 
 // reviwSlider end
+
+
+// categorySlider start
+
+$('.categorySlider').slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [{
+        breakpoint: 1199,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+        }
+    },
+    {
+        breakpoint: 991,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+        }
+    },
+    {
+        breakpoint: 767,
+        settings: {
+            slidesToShow: 1.5,
+            slidesToScroll: 1
+        }
+    },
+    {
+        breakpoint: 575,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    }
+    ]
+});
+
+// categorySlider end
+
+// menuSlide start
+
+$('.menuSlide').slick({
+    dots: false,
+    arrows: false, // Disable default arrows
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1199,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 767,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        }
+    ]
+});
+
+$('.menu-slider-btn-left').on('click', function () {
+    $('.menuSlide').slick('slickPrev');
+});
+
+$('.menu-slider-btn-right').on('click', function () {
+    $('.menuSlide').slick('slickNext');
+});
